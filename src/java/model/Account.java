@@ -25,13 +25,14 @@ import javax.faces.bean.SessionScoped;
 @SessionScoped
 public class Account {
     
+    private double balance=0;
        /**
      * Returns the current total balance of the account
      * @return - the balance
      */
     public double getBalance() 
     {
-        return 999;
+        return balance;
     }
     
     /**
@@ -40,7 +41,7 @@ public class Account {
      */
     public void deposit(double cash) 
     {
-       
+       balance=balance+cash; 
     }
     
     /**
@@ -49,7 +50,7 @@ public class Account {
      */
     public void withdraw(double cash) 
     {
-    
+    balance=balance-cash;
     }
     
     /**
@@ -58,6 +59,6 @@ public class Account {
     public void close() 
     {
         
-        
+        balance=0;
     }
 }
