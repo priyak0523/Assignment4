@@ -54,12 +54,10 @@ public class AccountTest {
         double cash = 500.0;
         Account instance = new Account();
         instance.deposit(cash);
-        instance.close(true);
+       
         double result = instance.getBalance();
         double expResult = 0.0;
         assertEquals(expResult, result, 0.0);
     }
     
-    
-    
-}
+ }
